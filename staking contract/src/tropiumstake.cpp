@@ -4,7 +4,7 @@ ACTION tropiumstake::regstaker (name username){
   require_auth(username);
   
   auto itr_banned = _banned_list.find(username.value);
-  check(itr_banned == _banned_list.end(), "You where banned, please see your administrator");
+  check(itr_banned == _banned_list.end(), "You where banned, please see your administrator");  //typo "were"
 
   auto itr = _staker_list.find(username.value);
   check(itr == _staker_list.end(), "You are already registered, you can stake your TRPM");
